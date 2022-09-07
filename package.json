@@ -147,14 +147,5 @@
         }
       ]
     ]
-  },
-  "codegenConfig": {
-    "libraries": [
-      {
-        "name": "RNRnAdAuthSpec",
-        "type": "modules",
-        "jsSrcsDir": "src"
-      }
-    ]
   }
 }

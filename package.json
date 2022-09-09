@@ -1,7 +1,7 @@
 {
   "name": "rn-ad-auth",
   "version": "0.0.1",
-  "description": "test",
+  "description": "A React Native package that provides Microsoft Azure AD Auth module.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -44,6 +44,9 @@
   "homepage": "https://github.com/sur950/rn-ad-auth#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies":{
+    "react-native-webview": "11.23.1"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",

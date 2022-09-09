@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "rn-ad-auth": ["./src/index"]
+      "rn-ad-auth": ["./src"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

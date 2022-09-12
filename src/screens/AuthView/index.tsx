@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, SafeAreaView, TouchableOpacity } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 import { WebView } from 'react-native-webview';
 import constants from '../../utilities/constants';
 import {
@@ -9,6 +9,7 @@ import {
 } from '../../utilities/helpers';
 import { getAuthTokens, getUserDetails } from '../../services/auth';
 import type { AuthViewProps } from '../../types';
+import Header from '../../components/Header';
 import styles from './styles';
 
 const AuthView = (props: AuthViewProps) => {
@@ -50,7 +51,6 @@ const AuthView = (props: AuthViewProps) => {
     const data = {
       code,
       tenant_id: config.tenant_id,
-      redirect_uri: config.redirect_uri,
       client_id: config.client_id as string,
       ...constants.DEFAULT_GET_TOKEN_PARAMS,
     };
@@ -100,13 +100,8 @@ const AuthView = (props: AuthViewProps) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
-        <Image
-          style={styles.closeImg}
-          resizeMode="contain"
-          source={require('../../assets/images/close.png')}
-        />
-      </TouchableOpacity>
+      <StatusBar backgroundColor="#f8f7f8" barStyle="dark-content" />
+      <Header onCancel={onClose} />
       <WebView
         style={styles.container}
         source={{ uri: getWebUrl() }}

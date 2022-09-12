@@ -1,6 +1,6 @@
 {
   "name": "rn-ad-auth",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "A React Native package that provides Microsoft Azure AD Auth module.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

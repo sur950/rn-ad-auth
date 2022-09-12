@@ -1,6 +1,10 @@
+export type HeaderPropTypes = {
+  onCancel: () => void;
+  url?: string;
+};
+
 export type AuthConfig = {
   tenant_id: string;
-  redirect_uri: string;
   client_id?: string;
   scope?: string;
 };

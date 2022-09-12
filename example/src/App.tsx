@@ -17,6 +17,7 @@ export default function App() {
     tenant_id: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx',
     client_id: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx',
     scope: 'offline_access openid email profile User.Read',
+    redirect_uri: 'https://www.google.com/',
   };
 
   const onSuccess = (response: any) => {

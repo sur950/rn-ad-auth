@@ -1,6 +1,6 @@
-/* eslint-disable */
 export type AuthConfig = {
   tenant_id: string;
+  redirect_uri: string;
   client_id?: string;
   scope?: string;
 };
@@ -31,4 +31,5 @@ export type AuthTokenRequestDataType = {
   scope: string;
   grant_type: string;
   client_assertion_type: string;
+  redirect_uri: string;
 };

@@ -37,13 +37,10 @@ const AuthView = (props: AuthViewProps) => {
    */
   const handleLogin = async (state: any) => {
     const { url } = state;
+    const isMSUrl = url.includes('https://login.microsoftonline.com/');
 
     // Returning here  by certain conditions to validate correct callback url
-    if (
-      !url.includes('session_state') ||
-      url.includes('https://login.microsoftonline.com/') ||
-      state.navigationType
-    ) {
+    if (!url.includes('session_state') || isMSUrl || state.navigationType) {
       return;
     }
 
@@ -52,8 +49,9 @@ const AuthView = (props: AuthViewProps) => {
     const code = getParamValueFromUrl('code', url);
     const data = {
       code,
-      client_id: config.client_id as string,
       tenant_id: config.tenant_id,
+      redirect_uri: config.redirect_uri,
+      client_id: config.client_id as string,
       ...constants.DEFAULT_GET_TOKEN_PARAMS,
     };
 
@@ -101,7 +99,7 @@ const AuthView = (props: AuthViewProps) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
         <Image
           style={styles.closeImg}
@@ -110,7 +108,7 @@ const AuthView = (props: AuthViewProps) => {
         />
       </TouchableOpacity>
       <WebView
-        style={{ flex: 1, height: 500, backgroundColor: '#a9c1e8' }}
+        style={styles.container}
         source={{ uri: getWebUrl() }}
         onNavigationStateChange={onStateChange}
       />

@@ -6,12 +6,12 @@ import type { AuthConfig } from '../types';
  * @param params
  * @returns Serialized Params
  */
-const serializeParams = (params: any): string => {
+export const serializeParams = (params: any): string => {
   let paramStr = '';
 
   Object.keys(params).forEach(function (prop, index) {
     if (params[prop] !== null && params[prop] !== void 0)
-      paramStr += `${index == 0 ? '?' : '&'}${prop}=${encodeURIComponent(
+      paramStr += `${index === 0 ? '?' : '&'}${prop}=${encodeURIComponent(
         params[prop]
       )}`;
   });

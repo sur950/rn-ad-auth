@@ -48,12 +48,14 @@
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
     "@babel/eslint-parser": "^7.18.2",
+    "@babel/preset-env": "^7.19.0",
     "@commitlint/config-conventional": "^17.0.2",
     "@react-native-community/eslint-config": "^3.0.2",
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.68.0",
+    "@types/react-test-renderer": "^18.0.0",
     "commitlint": "^17.0.2",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
@@ -76,19 +78,16 @@
     "react-native": "*",
     "react-native-webview": "11.23.1"
   },
-  "jest": {
-    "preset": "react-native",
-    "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/lib/"
-    ]
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ],
-    "rules":{
-      "subject-case": [2, "always", "sentence-case"]
+    "rules": {
+      "subject-case": [
+        2,
+        "always",
+        "sentence-case"
+      ]
     }
   },
   "release-it": {
@@ -113,10 +112,12 @@
     "parser": "@babel/eslint-parser",
     "extends": [
       "@react-native-community",
-      "prettier"  
+      "prettier"
     ],
     "rules": {
-      "@typescript-eslint/no-unused-vars": ["off"],
+      "@typescript-eslint/no-unused-vars": [
+        "off"
+      ],
       "prettier/prettier": [
         "error",
         {
@@ -153,5 +154,10 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "babel-preset-react-native": "^4.0.1",
+    "react-test-renderer": "17.0.2",
+    "ts-jest": "^29.0.0"
   }
 }

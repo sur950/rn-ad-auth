@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Authview test should match the AuthModal snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "height": 1314,
+      "width": 750,
+    }
+  }
+>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    presentationStyle="fullScreen"
+    supportedOrientations={
+      Array [
+        "portrait",
+      ]
+    }
+    visible={true}
+  >
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      style={
+        Object {
+          "backgroundColor": "#f8f7f8",
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#f8f8f8",
+            "borderBottomColor": "#d8d8d8",
+            "borderBottomWidth": 1,
+            "flexDirection": "row",
+            "height": 44,
+            "paddingHorizontal": 20,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#007aff",
+                "fontSize": 18,
+                "fontWeight": "400",
+              }
+            }
+          >
+            Cancel
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            }
+          }
+        >
+          <Image
+            resizeMode="contain"
+            source={
+              Object {
+                "default": "",
+              }
+            }
+            style={
+              Object {
+                "height": 12,
+                "width": 12,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginLeft": 5,
+              }
+            }
+          >
+            https://login.microsoftonline.com
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flex": 1,
+              "overflow": "hidden",
+            },
+            undefined,
+          ]
+        }
+      >
+        <RNCWebView
+          cacheEnabled={true}
+          injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+          injectedJavaScriptForMainFrameOnly={true}
+          javaScriptEnabled={true}
+          messagingEnabled={true}
+          onContentProcessDidTerminate={[Function]}
+          onHttpError={[Function]}
+          onLoadingError={[Function]}
+          onLoadingFinish={[Function]}
+          onLoadingProgress={[Function]}
+          onLoadingStart={[Function]}
+          onMessage={[Function]}
+          onShouldStartLoadWithRequest={[Function]}
+          source={
+            Object {
+              "uri": "https://login.microsoftonline.com/e38a8b10-6073-4eb0-93bf-8b729e9ef139/oauth2/v2.0/authorize/?tenant_id=e38a8b10-6073-4eb0-93bf-8b729e9ef139&client_id=5a19138e-1cf2-4127-bb31-9fffedcea6fb&scope=openid&response_type=code&response_mode=query&state=12345&nonce=678910&redirect_uri=https%3A%2F%2Fazure-ad-login-3606b.web.app%2F",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+              },
+              Object {
+                "backgroundColor": "#f8f7f8",
+                "flex": 1,
+              },
+            ]
+          }
+          textInteractionEnabled={true}
+          useSharedProcessPool={true}
+        />
+      </View>
+    </RCTSafeAreaView>
+  </Modal>
+</View>
+`;
